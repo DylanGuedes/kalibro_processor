@@ -4,6 +4,8 @@ KalibroProcessor is the processing web service for Mezuro.
 
 == Unreleased
 
+* Adds project_id attribute for projects_controller#repositories_of response
+
 == v.1.3.3 - 29/07/2016
 
 * Insert in one query all aggregated MetricResults

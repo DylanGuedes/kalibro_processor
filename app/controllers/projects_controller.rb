@@ -48,7 +48,7 @@ class ProjectsController < ApplicationController
   def repositories_of
     if set_project
       respond_to do |format|
-        format.json { render json: {repositories: @project.repositories} }
+        format.json { render json: {repositories: @project.repositories, project_id: @project.id} }
       end
     end
   end

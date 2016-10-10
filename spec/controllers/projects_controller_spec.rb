@@ -162,7 +162,7 @@ RSpec.describe ProjectsController, :type => :controller do
       it { is_expected.to respond_with(:success) }
 
       it 'should return an array of repositories' do
-        expect(JSON.parse(response.body)).to eq(JSON.parse({repositories: repositories}.to_json))
+        expect(JSON.parse(response.body)).to eq(JSON.parse({repositories: repositories, project_id: project.id}.to_json))
       end
     end
 
@@ -178,7 +178,7 @@ RSpec.describe ProjectsController, :type => :controller do
       it { is_expected.to respond_with(:success) }
 
       it 'should return an empty array' do
-        expect(JSON.parse(response.body)).to eq(JSON.parse({repositories: repositories}.to_json))
+        expect(JSON.parse(response.body)).to eq(JSON.parse({repositories: repositories, project_id: project.id}.to_json))
       end
     end
   end
